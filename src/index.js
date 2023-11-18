@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {TestaCPF} from './Verificador.js';
+import {Limite} from './Limite.js';
+import {enviar_otp} from './enviar_otp.js';
+import {verificar_otp} from './verificar_otp.js';
+let cpf = document.querySelector('.input')
+let otp = document.querySelector('#verificar')
+let ver_otp = document.querySelector('#verificar_otp')
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+cpf.addEventListener('input', (e)=>{
+ let target = e.target
+ if (target.classList.contains('input')){
+    let a = Limite()
+    let b = TestaCPF()
+ }
+ 
+})
+otp.addEventListener('click', ()=>{
+   let a = enviar_otp()
+    
+})
+ver_otp.addEventListener('click', (e)=>{
+   let a = verificar_otp()
+})
