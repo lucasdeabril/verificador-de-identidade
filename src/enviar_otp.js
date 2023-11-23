@@ -2,7 +2,7 @@
 export function enviar_otp(){
     let numero = document.querySelector('#numero').value;
     console.log(numero)
-    let url = 'https://18.230.123.208:3000/teste'
+    let url = 'https://18.230.123.208:443/teste'
     fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
